@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receipt Format</title>
+</head>
+<body>
+  <h2>Receipt Example</h2>
+  <pre id="output"></pre>
+
+  <script>
+    const item = "Keyboard";
+    const price = 250;
+    const formatted = `Item: ${item.padEnd(15)} Price: Rs ${price.toFixed(2)}`;
+    document.getElementById("output").textContent = formatted;
+  </script>
+</body>
+</html>

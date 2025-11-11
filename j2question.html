@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uppercase Name</title>
+</head>
+<body>
+  <h2>Full Name in Uppercase</h2>
+  <input type="text" id="fullname" placeholder="Enter your full name">
+  <button onclick="displayUppercase()">Show</button>
+  <p id="output"></p>
+
+  <script>
+    function displayUppercase() {
+      let name = document.getElementById("fullname").value.trim();
+      name = name.replace(/\s+/g, " "); 
+      document.getElementById("output").textContent = name.toUpperCase();
+    }
+  </script>
+</body>
+</html>

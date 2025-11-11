@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Total Product Prices</title>
+</head>
+<body>
+  <h2>Total Price with Commas</h2>
+  <p id="output"></p>
+
+  <script>
+    function totalWithCommas(prices) {
+      const total = prices.reduce((sum, p) => sum + p, 0);
+      return total.toLocaleString('en-IN', { minimumFractionDigits: 2 });
+    }
+
+    const prices = [1200.5, 300.25, 4500];
+    const result = totalWithCommas(prices);
+
+    document.getElementById("output").textContent = `Total: Rs ${result}`;
+  </script>
+</body>
+</html>
